@@ -11,7 +11,7 @@ const HeatMap: React.FC = () => {
         </Typography>
         <Box sx={{ width: '100%', height: '400px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px' }}>
           <iframe
-            src="/crime_heat_map.html"
+            src={`${import.meta.env.VITE_API_URL}/crime_heat_map.html`}
             style={{ width: '100%', height: '100%', borderRadius: '5px' }}
             title="Crime Heat Map"
           />
