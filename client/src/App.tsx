@@ -1,15 +1,22 @@
-import React from 'react';
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import HomePage from "./pages/Home";
 
+function App() {
 
-const App: React.FC = () => {
-
-    return (
-        <div className="App">
-            <header className="App-header">
-                <h1>React + TypeScript</h1>
-            </header>
-        </div>
-    );
+  return (
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<HomePage/>}/>
+    //     <Route path="*" element={<> 404 Not Found </>} />
+    //   </Routes>
+    // </BrowserRouter>
+    <HomePage/>
+  );
 }
 
 export default App;
