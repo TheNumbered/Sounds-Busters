@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: node server/index.js
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./server:/app/server
+    env_file:
+      - .env  # Load environment variables from the .env file
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: serve -s -l 5000 client/dist
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./client:/app/client
