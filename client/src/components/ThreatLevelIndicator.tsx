@@ -7,7 +7,7 @@ interface ThreatLevelIndicatorProps {
 }
 
 const ThreatLevelIndicator: React.FC = () => {
-  const threatLevel = 'Low';  // Set the threat level
+  const threatLevel = 'Medium';  // Set the threat level
 
   // Set styles and icons based on threat level
   const getThreatLevelStyles = () => {
@@ -50,7 +50,7 @@ const ThreatLevelIndicator: React.FC = () => {
         
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '200px', backgroundColor: '#f0f0f0' }}>
           {/* Logo */}
-          <Avatar src="/logo256.png" alt="Logo" sx={{ width: 80, height: 80, marginBottom: 2 }} />
+          <Avatar src="/logo256.png" alt="Logo" sx={{ width: 100, height: 100, marginBottom: 2 }} />
           
           {/* Dynamic Icon */}
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>

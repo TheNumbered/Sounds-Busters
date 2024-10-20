@@ -1,5 +1,7 @@
 import cors from 'cors';
 import express from 'express';
+import alertsRouter from "./alerts.js"
+
 
 const app = express();
 
@@ -10,6 +12,8 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.json({ message: 'Hello, world!' });
 });
+
+app.use('/api', alertsRouter);
 
 app.use(express.static('public'));
 

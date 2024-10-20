@@ -44,6 +44,8 @@
           },
           allowLocalhostAsSecureOrigin: true,
         });
+
+        await OneSignal.User.addTag("role", "user");
       });
     </script>
 
